@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: aufumw86n-python-gitops
+  description: This is GitOps manifest for aufumw86n-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: aufumw86n-python
+    backstage.io/kubernetes-id: aufumw86n-python 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: aufumw86n-python   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:aufumw86n-python
